@@ -1,0 +1,13 @@
+{
+  "name": "unibal2sayad",
+  "version": "1.0.0",
+  "description": "UniBal2Sayad is a experimental script converter for Baloch which converts text from UniBal script to Sayad Script.",
+  "main": "index.js",
+  "repository": "https://github.com/JeyKeu/unibal2sayad.git",
+  "author": "Junaid Qadir  <shekhanzai.baloch@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "^4.1.1",
+    "jquery": "^3.3.1"
+  }
+}

@@ -1,0 +1,182 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Balochi UniBal To Sayad Converter Experiment</title>
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"/>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="assets/js/virtual-keyboard/css/keyboard.min.css"/>
+    <link rel="stylesheet" href="assets/js/virtual-keyboard/css/keyboard-dark.min.css"/>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <style>
+        @font-face {
+            font-family: 'adpbe-arabic-regular';
+            src: url('assets/fonts/Adobe.Arabic-Regular.otf');
+        }
+
+        #sayad {
+            font-family: 'adpbe-arabic-regular';
+            font-size: 2rem !important;
+        }
+    </style>
+    <script src="js/unibal2sayad.js"></script>
+</head>
+<body>
+<div class="container">
+    <h2 class="text-center mt-3 mb-5">UniBal To Sayad Script</h2>
+    <p class="text-center text-muted">
+        <small>By Junaid Qadir (<a href="https://twitter.com/jeykeu" target="_blank">@jeykeu</a>)</small>
+    </p>
+    <div class="mb-3">
+        <p>
+            This is just an experiment to demonstrate conversion from UnBal script to Sayad Script.
+            Please note that this is not a 100% accurate but its pretty close.
+            Comment below and let me know what you think?</p>
+    </div>
+    <div class="mb-3 text-right" dir="rtl" style="font-family: adpbe-arabic-regular; font-size:24px;">
+        <p>
+            اے بس یکّ ایکسپیریمنٹے اے پیش دارگ ءِ واستہ کہ یونی بل رھبند سید رھبند تہہ ءَ چوں کنورٹ کنئگ بیت۔
+
+            اے سد در سد ایکوریٹ نہ انت بلے نزّیک انت۔
+            جہل ءَ کمنٹ بکن ات ءُ بگوش ات کہ شمئے چے ھیال انت؟</p>
+    </div>
+    <div class="row">
+        <div class="col-md-12 mt-5 mb-5">
+            <p>Download UniBal Keyboard from <a href="https://github.com/theunibal/UniBal" target="_blank">here</a>.</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12 col-md-6">
+            <div class="form-group">
+                <label for="unibal">UniBal</label>
+                <div class="text-muted">
+                    <small>Type in UniBal here and click Convert button</small>
+                </div>
+                <textarea class="form-control" name="unibal" id="unibal" rows="8">Cí iń maní waśś wábí e hásil góń śaráb á
+Cí iń maní waśś wábí e hásil góń śaráb á
+
+Dáń cínco wahd á rép dayáń dil góń śaráb á
+Dáń cínco wahd á rép dayáń dil góń śaráb á
+
+Cí iń maní waśś wábíe hásil góń śaráb á
+Dáń cínco wahd á rép dayáń dil góń śaráb á
+
+Har kiśk bárt maná taí métage pánd á
+Man gár kutag wáhag e manzil góń śaráb á
+
+Dáń cínco wahd á rép dayáń dil góń śaráb á
+Dáń cínco wahd á rép dayáń dil góń śaráb á
+
+Cí iń maní waśś wábí e hásil góń śaráb á
+Dáń cínco wahd á rép dayáń dil góń śaráb á
+
+Tramp tramp á ricáń ars cá bécárage cammáń
+Herán int guśindá maní kátil góń śaráb á
+
+Dáń cínco wahd á rép dayáń dil góń śaráb á
+Dáń cínco wahd á rép dayáń dil góń śaráb á
+
+Cí iń maní waśś wábí e hásil góń śaráb á
+Dáń cínco wahd á rép dayáń dil góń śaráb á
+
+Marcígéń é wáninda kih bándáte umétiń
+Marcígéń é wáninda kih bándáte umétiń
+
+Jind á watí táwán dant jáhil góń śaráb á
+Dáń cínco wahd á rép dayáń dil góń śaráb á
+
+Dáń cínco wahd á rép dayáń dil góń śaráb á
+Cí iń maní waśś wábí e hásil góń śaráb á
+
+Dáń cínco wahd á rép dayáń dil góń śaráb á
+Kází kih guláéś mudám góń kaddah u kepáń
+
+Kází kih guláéś mudám góń kaddah u kepáń
+É dil zadagiń áp jatag bil góń śaráb á
+
+Dáń cínco wahd á rép dayáń dil góń śaráb á
+Dáń cínco wahd á rép dayáń dil góń śaráb á
+
+Cí iń maní waśś wábí e hásil góń śaráb á
+Dáń cínco wahd á rép dayáń dil góń śaráb á
+
+Cí iń maní waśś wábí e hásil góń śaráb á
+Dáń cínco wahd á rép dayáń dil góń śaráb á
+Dáń cínco wahd á rép dayáń dil góń śaráb á
+
+Cí iń maní waśś wábí e hásil góń śaráb á</textarea>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-6">
+            <div class="form-group">
+                <label for="sayad">Sayad</label>
+                <div class="text-muted">
+                    <small>The converted text will appear here.</small>
+                </div>
+                <textarea dir="rtl" class="form-control" name="sayad" id="sayad" rows="6"></textarea>
+            </div>
+        </div>
+    </div>
+    <div class="mb-5">
+        <button class="btn btn-primary btn-block" id="btnConvert">Convert</button>
+    </div>
+</div>
+<footer class="small bg-secondary text-light p-1 pl-2 mt-5">
+    <small>
+        &copy; 2018 - <a target="_blank" class="text-light" href="http://junaidqadir.com">Junaid Qadir Baloch</a>
+    </small>
+</footer>
+<script src="../src/unibal2sayad.js"></script>
+<script src="assets/js/virtual-keyboard/js/jquery.mousewheel.min.js"></script>
+<script src="assets/js/virtual-keyboard/js/jquery.keyboard.min.js"></script>
+<script src="assets/js/unibal-keyboard.js"></script>
+<script>
+    String.prototype.replaceAt = function (index, replacement) {
+        return this.substr(0, index) + replacement + this.substr(index + replacement.length);
+    };
+    $(document).ready(function () {
+
+        let sayadAlphabet = ['آ', 'ا', 'ب', 'پ', 'ت', 'ٹ', 'ج', 'چ', 'د', 'ڈ', 'ر', 'ڑ', 'ز', 'ژ', 'س', 'ش', 'ک', 'گ', 'ل', 'م', 'ن', 'و', 'ہ', 'ھ', 'ء', 'ی', 'ے'];
+        let unibalAlphabet = ['a', 'á', 'b', 'c', 'd', 'đ', 'ḓ', 'e', 'é', 'f', 'g', 'ǵ', 'h', 'i', 'í', 'j', 'k', 'l', 'm', 'n', 'ń', 'o', 'ó', 'p', 'r', 'ŕ', 's', 'ś', 't', 'ŧ', 'ṱ', 'u', 'ú', 'w', 'y', 'z', 'ź'];
+        let unibal = $('#unibal');
+        unibal.keyboard({
+            usePreview: true, // disabled for contenteditable
+            useCombos: false,
+            autoAccept: true,
+            layout: 'custom',
+            customLayout: {
+                'normal': [
+                    '` f v x é ŕ ŧ ǵ ú í ó ḓ ṱ {del} {b}',
+                    '{tab} á w e r t y u i o p [ ] \\',
+                    'a s d đ g h j k l ; \' {enter}',
+                    '{shift} z ź c ń b n m , . / {shift}',
+                    '{accept} {space} {left} {right} {undo:Undo} {redo:Redo}'
+                ],
+                'shift': [
+                    '~ F V X É Ŕ Ŧ Ǵ Ú Í Ó Ḓ Ṱ {del} {b}',
+                    '{tab} Á W E R T Y U I O P { } |',
+                    'A S D F G H J K L : " {enter}',
+                    '{shift} Z Ź C Ń B N M < > ? {shift}',
+                    '{accept} {space} {left} {right} {undo:Undo} {redo:Redo}'
+                ]
+            },
+            display: {
+                del: '\u2326:Delete',
+                redo: '↻',
+                undo: '↺'
+            }
+        });
+        let sayad = $('#sayad');
+
+        let btnConvert = $('#btnConvert');
+        btnConvert.click(function () {
+            let unibalText = unibal.val();
+            let output = UniBal2Sayad.convert(unibalText);
+            sayad.val(output);
+        });
+    });
+</script>
+</body>
+</html>
