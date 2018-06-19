@@ -11,7 +11,7 @@ UniBal2Sayad is a experimental script converter for Balochi which converts text 
 
 `آ ا ب پ ت ٹ ج چ د ڈ ر ڑ ز ژ س ش ک گ ل م ن و ہ ھ ء ی ے`
 
-## Installing Locally
+## Installing The Demo Locally
 To install unibal2sayad locally follow these steps:
 - clone `https://github.com/JeyKeu/unibal2sayad.git`
 - open terminal and cd in to the `unibal2sayad/demo` directory 
